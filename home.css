@@ -1,0 +1,982 @@
+body {
+  background-image: url("home bg.png");
+  background-image: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  cursor: url("Coffee.png"), all-scroll;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+}
+
+.navbar img {
+  margin-top: 10px; /* Adjust the margin as needed */
+  width: 50px; /* Adjust the width as needed */
+  height: auto;
+  z-index: 1000;
+  top: 50%; /* Position at vertical center */
+  transform: translateY(-1%); /* Adjust position to center vertically */
+}
+
+
+.navbar form img {
+  width: 30px; /* Adjust the width as needed */
+  height: 30px;
+  margin-bottom: 11px;
+  z-index: 1000;
+}
+
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Align items with equal space between them */
+  align-items: center; /* Center items vertically */
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  
+
+}
+
+.navbar-nav li {
+  text-align: center;
+  margin-bottom: 10px; /* Adjust the margin as needed */
+  color: #ffffff;
+
+}
+
+.navbar-nav a {
+  text-decoration: none;
+  color: #343a40; /* Set your desired text color */
+}
+
+.navbar .a .img{
+ 
+  height: 50px;
+  width: 50px;
+}
+
+.navbar-nav li a {
+  text-align: center;
+  margin-bottom: 10px; /* Adjust the margin as needed */
+  
+  
+}
+
+.d-flex {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end; 
+  margin: 20px;
+  position: fixed; 
+  top: 0; 
+  right: 0; 
+    z-index: 1000; /* Set a high z-index value to ensure it appears above other layers */
+
+}
+
+
+
+nav li:hover {
+  margin-bottom: 10px; /* Decrease the spacing after hovering */
+}
+nav img {
+  margin-right: 10px;
+  width: 20px;
+  height: auto;
+  color:#ae966f;
+}
+
+
+nav li a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 100px;
+  position: relative;
+  transition: margin 0.3s; /* Add transition for smooth effect */
+
+}
+
+nav li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ae966f;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  transition: width 0.5s;
+}
+
+nav li a:hover::after {
+  width: 100%;
+}
+
+
+
+#sidebar {
+  width: 80px;
+  height: 100vh;
+  background-color: rgba(49, 42, 33, 0.378);
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  z-index: 1;
+  transition: width 0.3s;
+}
+
+#sidebar:hover {
+  width: 180px;
+}
+
+#sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+#sidebar ul li {
+  margin-bottom: 47px;
+  text-align: center;
+  transition: background-color 0.3s; /* Add transition for smooth effect */
+
+}
+
+#sidebar ul li:hover {
+  background-color: #555;
+
+
+}
+
+#sidebar ul li img {
+  width: 30px;
+}
+
+#sidebar ul li span {
+  display: none;
+  color: #fff;
+  font-size: 50px;
+}
+
+#sidebar:hover ul li span {
+  display: inline;
+
+}
+
+#content {
+  margin-left: 60px; /* Width of the sidebar */
+  padding: 20px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background: #333333;
+  position: static;
+  padding: 10px 50px;
+  bottom: 0;
+  width: 95%;
+}
+
+.left,
+.right {
+  font-size: px;
+  color: #fafafa;
+  margin: 5;
+}
+
+/* ABOUT US CSS */
+*{ 
+  margin: 0;
+  padding: 0;
+  font-family: "Your Elegant & Readable Font", serif;
+  
+}
+.heading{
+  width: 90%;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px auto;
+  color: rgb(255, 251, 251);
+  
+}
+
+.divider{
+  width: 100px;
+  height: 2px;
+  margin-top: 5px;
+  background-color: rgba(250, 162, 0, 0.986);
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.mvv-container{
+  max-width: 94%;
+  margin: 50px auto 0;
+}
+
+.mvv-container .mvv-block{
+  margin-bottom: 150px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.mvv-container .mvv-block .image{
+  flex: 0 0 auto;
+  width: 300px;
+  overflow: hidden;
+  margin-left:35px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 5px rgba (0, 0, 0, .3);
+}
+.mvv-container .mvv-block .image img{
+  width: 100%;
+  transition: .3s;
+  transform: scale(1);
+  
+}
+.mvv-container .mvv-block .image:hover img{
+  transform: scale(1.05);
+}
+
+.mvv-container .mvv-block .content{
+  flex: 0 0 auto;
+  width: calc(100% - 400px);
+  box-sizing: border-box;
+  align-self: center;
+  margin-left:40px;
+}
+
+
+.mvv-container .mvv-block .content h5{
+
+  font-weight: 700;
+  font-size: 22px;
+  color: rgba(250, 162, 0, 0.986);
+  margin-bottom: 10px;
+}
+.mvv-container .mvv-block .content p{
+  font-size: 20px;
+  color: #fff;
+
+}
+
+
+@media screen and (min-width: 1024px)
+{
+.mvv-container .mvv-block:nth-child(odd) .image
+{
+  order: 1;
+}
+.mvv-container .mvv-block:nth-child(even) .image
+{
+  order: 2;
+}
+.mvv-container .mvv-block:nth-child(odd) .content
+{
+  order: 2;
+  padding-left: 40px;
+}
+.mvv-container .mvv-block:nth-child(even) .content
+{
+  order: 1;
+  padding-right: 30px;
+}
+.mvv-container .mvv-block:nth-child(odd) .team
+{
+  order: 3;
+  padding-right: 40px;
+
+}
+
+.mvv-container .mvv-block:nth-child(even) .tea
+{
+  order: 4;
+
+}
+
+.mvv-container .mvv-block:nth-child(odd) .custom
+{
+  order: 5;
+
+}
+
+}
+
+.ourteam{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px auto;
+  color: rgb(255, 251, 251);
+}
+.liness{
+  width: 100px;
+  height: 2px;
+  margin-top: 5px;
+  background-color: rgba(250, 162, 0, 0.986);
+  display: inline-block;
+}
+.mvv-container .mvv-block .team{
+  flex: 0 0 auto;
+  width: 300px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 5px rgba (0, 0, 0, .3);
+}
+.mvv-container .mvv-block .team img{
+  width: 100%;
+  transition: .3s;
+  transform: scale(1);
+  margin-left:20px;
+
+}
+.mvv-container .mvv-block .team:hover img{
+  transform: scale(1.05);
+}
+
+
+.milktea{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px auto;
+  color: rgb(255, 251, 251);
+}
+.line{
+  width: 100px;
+  height: 2px;
+  margin-top: 5px;
+  background-color: rgba(250, 162, 0, 0.986);
+  display: inline-block;
+}
+.mvv-container .mvv-block .tea{
+  flex: 0 0 auto;
+  width:250px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 5px rgba (0, 0, 0, .3);
+}
+.mvv-container .mvv-block .tea img{
+  width: 100%;
+  transition: .3s;
+  transform: scale(1);
+  margin-left:20px;
+
+}
+.mvv-container .mvv-block .tea:hover img{
+  transform: scale(1.05);
+}
+
+.customer{
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px auto;
+  color: rgb(255, 251, 251);
+}
+.lines{
+  width: 100px;
+  height: 2px;
+  margin-top: 5px;
+  background-color: rgba(250, 162, 0, 0.986);
+  display: inline-block;
+}
+.mvv-container .mvv-block .custom{
+  flex: 0 0 auto;
+  width:250px;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-left:100px;
+  box-shadow: 0 0 10px 5px rgba (0, 0, 0, .3);
+}
+.mvv-container .mvv-block .custom img{
+  width: 100%;
+  transition: .3s;
+  transform: scale(1);
+
+}
+.mvv-container .mvv-block .custom:hover img{
+  transform: scale(1.05);
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  .mvv-block {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mvv-block {
+    flex: 1 1 calc(100% - 20px);
+  }
+
+  .heading h1 {
+    font-size: 24px;
+  }
+
+  .divider {
+    width: 50px;
+  }
+
+  .ourteam h1,
+  .milktea h1,
+  .customer h1 {
+    font-size: 24px;
+  }
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 1024px) {
+  .mvv-block {
+    flex: 1 1 calc(33% - 20px);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mvv-block {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .mvv-block {
+    flex: 1 1 calc(100% - 20px);
+  }
+}
+
+
+/* BRANCHES CSS */
+#branches {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative; /* Ensure proper positioning */
+  z-index: 1; /* Ensure section stays above other elements */
+  overflow: hidden; /* Hide overflow to prevent background from overflowing */
+
+}
+
+#branches::before {
+  content: ""; /* Create pseudo-element */
+  position: absolute; /* Position relative to its container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(254, 210, 140); /* Set background color to black */
+  z-index: -1; /* Ensure background stays behind content */
+}
+
+.branch-container {
+  width: 45%; /* Adjust as needed for the desired width of each branch container */
+  margin-bottom: 20px;
+}
+
+.branch {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  color: #000000; /* Set text color inside the container to black */
+  text-align: center; /* Align text to center */
+}
+
+
+
+.branch-container .h1 {
+  color: #ffffff; /* Set h1 font color to white */
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5px auto 30px; 
+}
+
+.heading2{
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wrapper{
+  width: 40%;
+  display: flex;
+  animation: slide 14s infinite;
+  
+  
+}
+@keyframes slide{
+  0%{
+      transform: translateX(0);
+  }
+  25%{
+      transform: translateX(0);
+
+  }
+  50%{
+      transform: translateX(-100%);
+  }
+
+  75%{
+      transform: translateX(-200%);
+  }
+
+  100%{
+      transform: translateX(-300%);
+  }
+}
+
+
+
+
+/* Styling for slider container */
+.slider {
+  overflow: hidden; /* Hide overflow content */
+  position: relative; /* Set position to relative */
+  width: fit-content; /* Adjust container width to fit content */
+  margin: auto; /* Center the container */
+  background-color:transparent; /* Set background color to black */
+  padding: 20px; /* Add some padding for better appearance */
+}
+
+.wrapper img {
+  scroll-snap-align: start; /* Ensure each slide snaps to the start */
+  flex: 0 0 auto; /* Disable flex growth */
+  width: calc(10% - 5px); /* Set width for each slide, considering margin */
+  width: 500px; /* Set fixed width for each slide */
+  max-width: 100%; /* Ensure images don't exceed container width */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add some space between images */
+}
+
+/* Styling for slider controls */
+.prev,
+.next {
+  position: absolute; /* Set position to absolute for easy positioning */
+  top: 50%; /* Align to vertical center */
+  transform: translateY(-50%); /* Center vertically */
+  background: rgba(84, 84, 84, 0.5); /* Semi-transparent background */
+  color: #333; /* Button text color */
+  border: none; /* Remove border */
+  padding: 10px; /* Add padding */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  z-index: 1; /* Ensure controls are above slides */
+}
+
+.prev {
+  left: 0; /* Position previous button to the left */
+}
+
+.next {
+  right: 0; /* Position next button to the right */
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+/* GROW WITH US CSS */
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+/* Style for Popup Message */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  z-index: 1000;
+  text-align: center; /* Center align the content */
+}
+
+.popup p {
+  margin: 0;
+  margin-bottom: 20px; /* Add margin bottom to the message */
+  font-size: 18px; /* Enlarge the font size of the message */
+}
+
+.popup button {
+  background-color: #ae895d;
+  color: white;
+  border: none;
+  padding: 15px 30px; /* Increase padding for the button */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* Enlarge the font size of the button */
+}
+
+.popup button:focus {
+  outline: none; /* Remove focus outline */
+}
+
+.confirmation-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-align: center;
+}
+
+.confirmation-popup p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.confirmation-popup button {
+  background-color: #ae895d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.confirmation-popup button:focus {
+  outline: none;
+}
+
+.thank-you-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-align: center;
+}
+
+.thank-you-popup p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.thank-you-popup button {
+  background-color: #ae895d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.thank-you-popup button:focus {
+  outline: none;
+}
+
+.job-application-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 40px; /* Increased padding */
+  width: 400px; /* Increased width */
+  z-index: 1000;
+  text-align: center; /* Center align text */
+}
+
+.job-application-popup p {
+  margin-bottom: 20px; /* Increased margin */
+}
+
+.job-application-popup button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px; /* Adjusted padding */
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block; /* Make the button inline-block */
+  margin-right: 10px; /* Add right margin to separate buttons */
+}
+
+.job-application-thank-you-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 40px; /* Increased padding */
+  width: 400px; /* Increased width */
+  z-index: 1000;
+  text-align: center; /* Center align text */
+}
+
+.job-application-thank-you-popup p {
+  margin-bottom: 20px; /* Increased margin */
+}
+
+.job-application-thank-you-popup button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px; /* Adjusted padding */
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block; /* Make the button inline-block */
+  margin-right: 10px; /* Add right margin to separate buttons */
+}
+
+.contact-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 40px;
+  width: 400px;
+  z-index: 1000;
+  text-align: center;
+}
+
+.contact-popup p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+.contact-popup button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Additional styling for hover effect on the button */
+.contact-popup button:hover {
+  background-color: #555;
+}
+
+
+/* CONTACT US CSS */
+
+.container1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+.contact-form.box {
+  float: left;
+  width: 50%;
+  margin: 20px auto;
+  border: 2px solid #ae966f;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.contact-info.box,
+.social-info.box {
+  width: 50%;
+  margin: 20px auto;
+  border: 2px solid #ae966f;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center the items horizontally */
+  align-items: center;
+  margin-right: 40px;
+  margin-bottom: 20px;
+}
+
+.contact-info .box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center the items horizontally */
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+.contact-info .box:not(:last-child) {
+  margin-right: 20px;
+}
+
+.contact-info .box .icon {
+  margin-right: 10px;
+}
+
+.contact-info .box .text {
+  text-align: right;
+  padding-right: 0;
+}
+
+.contact-info .box .text h3,
+.contact-info .box .text h2,
+.contact-info .box .text p,
+.contact-info .box .text h4 {
+  margin-bottom: 0;
+}
+
+.social-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center the items horizontally */
+  align-items: center;
+  margin-right: 40px;
+}
+
+.social-info {
+  display: flex;
+  flex-direction: row; /* Keep it as a row */
+  justify-content: flex-end; /* Move items to the right */
+  align-items: flex-end; /* Align items to the bottom */
+  margin-right: 40px;
+
+}
+
+.social-info .box .text h3,
+.social-info .box .text h2,
+.social-info .box .text p,
+.social-info .box .text h4 {
+  margin-bottom: 0;
+}
+
+.contact-form.box {
+  width: 40%; /* Adjust the width as needed */
+  margin: 10px ;
+  border: 100x solid #ae966f; /* Border color */
+  border-radius: 100x; /* Border radius for rounded corners */
+  padding: 100x; /* Add padding for spacing */
+  
+}
+
+.contact-form h2 {
+  text-align: center;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 30%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ae966f; /* Input border color */
+  border-radius: 20px; /* Input border radius */
+}
+
+.contact-form button {
+  cursor: pointer;
+  background-color: #ae966f; /* Button background color */
+  color: #ffffff; /* Button text color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px; /* Button border radius */
+}
+
+.contact-form button:hover {
+  background-color: #916e4b; /* Hover background color */
+}
+
+/* ... Previous CSS ... */
+/* Adjust the width of the boxes */
+.box {
+  width: 10%;
+  margin: 0 10px;
+}
+
+/* Adjust the padding of the text inside the boxes */
+.box .text {
+  padding: 10px;
+}
+
+/* Adjust the font size of the text inside the boxes */
+.box .text p {
+  font-size: 16px;
+}
+
+
+

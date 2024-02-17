@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body class="">
+
+    <button id="homeButton">Go TO HOME</button>
+    
+    <div class="container">
+        <header>
+            <div class="title">MENU</div>
+            <div class="icon-cart">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/>
+                </svg>
+                <span>0</span>
+            </div>
+        </header>
+        <div class="listProduct">
+
+        </div>
+    </div>
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart">
+            
+        </div>
+        <div class="btn">
+            <button class="close">CLOSE</button>
+            <button class="checkOut">Check Out</button>
+        </div>
+    </div>
+
+    <div id="orderSummaryModal" class="modal">
+        <div class="modal-content">
+          <span class="close-button">×</span>
+          <h2>Order Summary</h2>
+          <div id="orderDetails"></div>
+          <h3>Payment Method</h3>
+          <select id="paymentMethod" class="payment-method-select">
+            <option value="cash">Cash</option>
+            <option value="gcash">Gcash</option>
+            <option value="credit_card">Credit Card</option>
+          </select>
+
+ <!-- Additional fields for GCash payment -->
+ <div id="gcashInput" class="additional-fields">
+    <label for="mobileNumber" required >Mobile Number:</label>
+    <input type="text" id="mobileNumber" name="mobileNumber" required>
+  </div>
+
+  <!-- Additional fields for Credit Card payment -->
+  <div id="creditCardInput" class="additional-fields">
+    <label for="cardNumber" >Card Number:</label>
+    <input type="text" id="cardNumber" name="cardNumber" required>
+    <label for="expirationDate">Expiration Date:</label>
+    <input type="text" id="expirationDate" name="expirationDate" required>
+    <label for="cvv">CVV:</label>
+    <input type="text" id="cvv" name="cvv" required>
+    <label for="postalCode">Postal Code:</label>
+    <input type="text" id="postalCode" name="postalCode" required>
+  </div>
+    
+          <div id="deliveryFeeSection">
+            <h4>Delivery Fee: <span id="deliveryFee">0</span></h4>
+          </div>
+          <div id="totalAmountSection">
+            <h3>Total Amount: <span id="totalAmount">0</span></h3>
+          </div>
+          <button id="payButton">Pay</button>
+        </div>
+      </div>
+
+      
+
+    <script src="menu.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body class=>
+</html>

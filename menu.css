@@ -1,0 +1,398 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif; /* Use a suitable Google Font for a coffee theme */
+  background-color: #F5E5D3; /* Light beige background */
+  cursor: url("Coffee.png"), all-scroll;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 900px;
+  margin: auto;
+  max-width: 90vw;
+  text-align: center;
+  padding-top: 10px;
+  transition: transform .5s;
+}
+
+#homeButton {
+  background-color: #805D5A; /* Dark brown */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add smooth transition */
+}
+
+#homeButton:hover {
+  background-color: #6b4744; /* Darken the color on hover */
+}
+
+svg {
+  width: 30px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.icon-cart {
+  position: relative;
+}
+
+.icon-cart span {
+  position: absolute;
+  background-color: #805D5A; /* Dark brown */
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #fff;
+  top: 50%;
+  right: -20px;
+}
+
+.title {
+  font-size: xx-large;
+  color: #805D5A; /* Dark brown */
+}
+
+.listProduct .item img {
+  width: 105%;
+  height: 275px;
+  object-fit: cover;
+  border-radius: 20px;
+  filter: drop-shadow(0 50px 20px #0009);
+}
+.listProduct {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.listProduct .item {
+  background-color: #D3B6A5; /* Light brown */
+  padding: 20px;
+  border-radius: 20px;
+  display: flex; /* Use flexbox to align items horizontally */
+  flex-direction: column; /* Arrange children elements vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.listProduct .item h2 {
+  font-weight: 500;
+  font-size: large;
+  margin-top: 10px; /* Add margin to separate image from name */
+}
+
+.listProduct .item .price {
+  letter-spacing: 7px;
+  font-size: small;
+}
+
+.listProduct .item button {
+  background-color: #805D5A; /* Dark brown */
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* cart */
+.cartTab {
+  width: 400px;
+  background-color: #805D5A; /* Dark brown */
+  color: #fff;
+  position: fixed;
+  top: 0;
+  right: -400px;
+  bottom: 0;
+  display: grid;
+  grid-template-rows: 70px 1fr 70px;
+  transition: .5s;
+}
+
+body.showCart .cartTab {
+  right: 0;
+}
+
+body.showCart .container {
+  transform: translateX(-250px);
+}
+
+.cartTab h1 {
+  padding: 20px;
+  margin: 0;
+  font-weight: 300;
+}
+
+.cartTab .btn {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cartTab button {
+  background-color: #D3B6A5; /* Light brown */
+  color: #805D5A; /* Dark brown */
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cartTab .close {
+  background-color: #fff;
+}
+
+.listCart .item img {
+  width: 100%;
+}
+
+.listCart .item {
+  display: grid;
+  grid-template-columns: 70px 150px 50px 1fr;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.listCart .quantity span {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  border-radius: 50%;
+  color: #805D5A; /* Dark brown */
+  cursor: pointer;
+}
+
+.listCart .quantity span:nth-child(2) {
+  background-color: transparent;
+  color: #fff;
+  cursor: auto;
+}
+
+.listCart .item:nth-child(even) {
+  background-color: #D3B6A5; /* Light brown */
+}
+
+.listCart {
+  overflow: auto;
+}
+
+.listCart::-webkit-scrollbar {
+  width: 0;
+}
+
+/* mobile */
+@media only screen and (max-width: 992px) {
+  .listProduct {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .listProduct {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  font-family: 'Arial', sans-serif; /* Change to your preferred font */
+  background-color: #F5E5D3; /* Light beige background */
+  margin: 10% auto; 
+  text-align: center; /* Center all text within the modal */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  width: 80%; 
+  max-width: 600px; /* Limit the width to prevent it from being too wide */
+}
+
+.close-button {
+  color: #805D5A; /* Dark brown */
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #D3B6A5; /* Light brown */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.order-details {
+  border-top: 1px solid #ddd; /* Add a border at the top of order details */
+  padding-top: 20px; /* Add some top padding */
+  margin-top: 20px;
+}
+
+.order-details p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.total-amount,
+.delivery-fee {
+  font-weight: bold;
+  color: #805D5A; /* Dark brown */
+  font-size: 18px; /* Increase font size for total amount and delivery fee */
+}
+
+#totalAmount,
+#deliveryFee {
+  color: #805D5A; /* Dark brown */
+}
+
+#payButton {
+  font-size: 16px; /* Increase font size for buttons */
+  background-color: #805D5A; /* Dark brown */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#payButton:hover,
+.go-home:hover {
+  background-color: #6b4744; /* Darken the color on hover */
+}
+
+/* Add this CSS to center the alert message */
+.alert-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 0, 0, 0.8); /* Red with opacity */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000; /* Ensure it's above other content */
+  text-align: center; /* Center text */
+}
+
+/* Add this CSS to style the alert message */
+.alert-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #c21000; /* Dark brown */
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* Adjust the styles of the alert message */
+.alert-container p {
+  margin: 0;
+}
+
+.payment-method-select {
+  width: 100%; /* Make the select box full width */
+  padding: 10px;
+  font-size: 16px; /* Adjust font size as needed */
+  border: 1px solid #ddd; /* Add a border */
+  border-radius: 5px; /* Add border radius */
+}
+
+/* Add this CSS for payment method options */
+.payment-method-options {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.payment-method-options select {
+  font-size: 16px; /* Adjust font size as needed */
+  font-weight: bold; /* Make text bold */
+  padding: 5px 10px;
+}
+
+/* Adjust size and style for total amount and payment method headings */
+.total-amount-heading,
+.payment-method-heading {
+  font-size: 20px; /* Larger font size */
+  font-weight: bold; /* Bold text */
+  margin-bottom: 10px; /* Add some space between headings and content */
+}
+
+.custom-alert-container {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4CAF50; /* Green */
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.custom-alert-container p {
+  margin: 0; /* Remove default margin */
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+
+.additional-fields {
+  margin-top: 20px;
+  display: none;
+  text-align: center;
+  margin:auto;
+}
+.additional-fields label {
+  display: block;
+  margin-bottom: 10px;
+}
+.additional-fields input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+.additional-fields input:focus {
+  border-color: #007bff;
+  outline: none;
+} 
+.additional-fields input[type="text"] {
+  text-align: center;
+}
