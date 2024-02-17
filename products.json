@@ -3,73 +3,73 @@
         "id": 1,
         "name":" Sacho Signature Cold Brew",
         "price": 80, 
-        "image": "image/1.jpg"
+        "image": "1.jpg"
     },
     {
         "id": 2,
         "name":" Bamboo Charcoal W/ Cream Cheese",
         "price": 85,
-        "image": "image/2.jpg"
+        "image": "2.jpg"
     },
     {
         "id": 3,
         "name":" Strawberry W/ Cream Cheese",
         "price": 70,
-        "image": "image/3.jpg"
+        "image": "3.jpg"
     },
     {
         "id": 4,
         "name":" Okinawa",
         "price": 70,
-        "image": "image/4.jpg"
+        "image": "4.jpg"
     },
     {
         "id": 5,
         "name":" Sweet Black",
         "price": 75,
-        "image": "image/5.jpg"
+        "image": "5.jpg"
     },
     {
         "id": 6,
         "name":" Matcha Latte",
         "price": 80,
-        "image": "image/6.jpg"
+        "image": "6.jpg"
     },
     {
         "id": 7,
         "name":" Strawberry Fruit Tea",
         "price": 70,
-        "image": "image/7.jpg"
+        "image": "7.jpg"
     },
     {
         "id": 8,
         "name":" Apple Fruit Tea",
         "price": 70,
-        "image": "image/8.jpg"
+        "image": "8.jpg"
     },
     {
         "id": 9,
         "name":" Lecha Flan",
         "price": 120,
-        "image": "image/9.jpg"
+        "image": "9.jpg"
     },
     {
         "id": 10,
         "name":" Cheesy Bacon Fries",
         "price": 99,
-        "image": "image/10.jpg"
+        "image": "10.jpg"
     },
     {
         "id": 11,
         "name":" Pepperoni",
         "price": 179,
-        "image": "image/11.jpg"
+        "image": "11.jpg"
     },
     {
         "id": 12,
         "name":" Supreme Pizza",
         "price": 239,
-        "image": "image/12.png"
+        "image": "12.png"
     }
 
 ]
